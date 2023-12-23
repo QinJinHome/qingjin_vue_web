@@ -2,7 +2,7 @@ import Home from "../view/Home.vue";
 import About from "../view/About.vue";
 import {createRouter,createWebHashHistory} from "vue-router"
 
-const routes = [{ path: '/', component: Home },
+const routes = [{ path: '/', component: ()=>import("@/view/Login.vue") },
 { path: '/about', component: About },]
 
 
@@ -11,5 +11,11 @@ export const router = createRouter({
     history: createWebHashHistory(),
     routes, // `routes: routes` 的缩写
 })
+
+
+
+
+
+
 
 
